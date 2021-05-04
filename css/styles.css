@@ -9,8 +9,8 @@
         flex-wrap: wrap;
         justify-content: space-between;
         box-shadow: 2px 4px 8px rgb(218, 216, 216);
-        position: sticky;
-        z-index: 1;
+        /* position: sticky; */
+        /* z-index: 1; */
     }
     
     .top-nav-bar-headings {
@@ -391,5 +391,85 @@
     .available-pic>img {
         overflow: hidden;
         cursor: pointer;
+        transition: .5s;
         width: 100%;
+        box-shadow: 2px 4px 8px grey;
+    }
+    
+    .available-pic>img:hover {
+        transform: scale(1.04);
+        box-shadow: 2px 4px 8px grey;
+    }
+    
+    .about-any-do {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: #f3f3f3;
+    }
+    
+    .main-heading>h2 {
+        margin-left: 8vw;
+        font-weight: 700;
+        margin-top: 3vh;
+        margin-bottom: 4vh;
+    }
+    
+    .containabout {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 8vh;
+    }
+    
+    .about1,
+    .about2,
+    .about3,
+    .about4 {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        flex-wrap: wrap;
+        font: 100 20px/1.3 "Poppins", "HelveticaNeue", Arial, Helvetica, sans-serif;
+    }
+    
+    .about1>a,
+    .about2>a,
+    .about3>a,
+    .about4>a {
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 2vh;
+        transition: .4s;
+        font-weight: lighter;
+        font: 300 20px/1.3 "Poppins", "HelveticaNeue", Arial, Helvetica, sans-serif;
+    }
+    
+    .about1>a:hover {
+        text-decoration: none;
+        color: #000;
+        transform: scale(1.05);
+        font: 300 20px/1.3 "Poppins", "HelveticaNeue", Arial, Helvetica, sans-serif;
+    }
+    
+    .about2>a:hover {
+        text-decoration: none;
+        color: #000;
+        transform: scale(1.05);
+        font: 300 20px/1.3 "Poppins", "HelveticaNeue", Arial, Helvetica, sans-serif;
+    }
+    
+    .about3>a:hover {
+        text-decoration: none;
+        color: #000;
+        transform: scale(1.05);
+        font: 300 20px/1.3 "Poppins", "HelveticaNeue", Arial, Helvetica, sans-serif;
+    }
+    
+    .about4>a:hover {
+        text-decoration: none;
+        color: #000;
+        transform: scale(1.05);
+        font: 300 20px/1.3 "Poppins", "HelveticaNeue", Arial, Helvetica, sans-serif;
     }
