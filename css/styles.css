@@ -10,8 +10,8 @@
         flex-wrap: wrap;
         justify-content: space-between;
         box-shadow: 2px 4px 8px rgb(218, 216, 216);
-        /* position: sticky; */
-        /* z-index: 1; */
+        /* position: sticky;
+        z-index: 1; */
     }
     
     .top-nav-bar-headings {
@@ -24,6 +24,23 @@
         margin-bottom: 2vh;
         /* flex-wrap: wrap; */
         justify-content: space-evenly;
+    }
+    
+    .list {
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        margin-top: 12px;
+        margin-left: 10px;
+    }
+    
+    .list>img {
+        height: 12vh;
+        width: 12vw;
+    }
+    
+    .list>button {
+        font-weight: bolder;
     }
     
     .top-nav-bar-headings>img {
