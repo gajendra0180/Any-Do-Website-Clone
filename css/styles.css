@@ -1,6 +1,7 @@
     .mainpagecontainer {
         display: flex;
         flex-direction: column;
+        /* overflow: hidden; */
     }
     
     .top-nav-bar {
@@ -472,4 +473,157 @@
         color: #000;
         transform: scale(1.05);
         font: 300 20px/1.3 "Poppins", "HelveticaNeue", Arial, Helvetica, sans-serif;
+    }
+    
+    @media only screen and (max-width: 781px) {
+        .mainpagecontainer {
+            overflow: hidden;
+        }
+        .top-nav-bar-buttons {
+            display: none;
+        }
+        .busy-life-video>video {
+            width: 250px;
+        }
+        .best-way-organize-pic {
+            margin-left: 0px;
+        }
+        .best-way-organize-text {
+            margin-right: 10vw;
+        }
+        .calendar-you-text {
+            margin-left: 8vw;
+        }
+        .calendar-you-video {
+            margin-left: 10px;
+        }
+        .calendar-you {
+            margin-bottom: 100px;
+        }
+        .daily-planner-pic>img {
+            margin-left: 15vw;
+        }
+    }
+    
+    @media only screen and (max-width: 675px) {
+        .busy-life-video>video {
+            margin-right: 5vw;
+        }
+        .best-way-organize-pic {
+            margin-left: 0vw;
+        }
+        .best-way-organize-pic>video {
+            width: 60vw;
+            height: 100vh;
+        }
+        .calendar-you-video>video {
+            width: 55vw;
+            height: 100vh;
+        }
+        .daily-planner-pic>img {
+            margin-left: 10vw;
+        }
+        .review3 {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-width: 528px) {
+        .busy-life-video>video {
+            margin-right: 2vw;
+            width: 200px;
+            margin-top: -10vh;
+        }
+        .daily-planner-pic>img {
+            margin-left: 3vw;
+        }
+        .busy-life-text>a {
+            position: relative;
+            top: -11vh;
+        }
+    }
+    
+    @media only screen and (max-width: 350px) {
+        .busy-life-text>a {
+            position: relative;
+            top: -180px;
+        }
+        .busy-life-video>video {
+            justify-content: center;
+            margin-left: 20vw;
+            margin-top: -30vh;
+        }
+        .best-way-organize-pic {
+            margin-left: 15vw;
+            margin-top: -20vh;
+        }
+        .best-way-organize-text {
+            margin-left: 25vw;
+            margin-top: -20vh;
+        }
+        .best-way-organize-text>a {
+            position: relative;
+            top: -22vh;
+            font-size: 1rem;
+        }
+        .calendar-you {
+            margin-top: 10vh;
+        }
+        .calendar-you-video {
+            margin-left: 100vw;
+        }
+        .organize {
+            margin-top: -30vh;
+        }
+        .review2 {
+            display: none;
+        }
+        .reviews {
+            justify-content: center;
+        }
+        .trustworthy-pic>video {
+            margin-top: 15vh;
+            height: 100%;
+            width: 100%;
+            margin-right: 15vw;
+            margin-bottom: 45vh;
+        }
+        /* trustworthy-text>a {
+                    position: relative;
+                    top: -500vh;
+                } */
+        .daily-planner {
+            flex-wrap: wrap;
+        }
+        .daily-planner-pic>img {
+            display: none;
+        }
+        .daily-planner-text {
+            text-align: center;
+            position: relative;
+            top: -30vh;
+        }
+        .available {
+            display: none;
+        }
+        .about-any-do {
+            text-align: center;
+        }
+        .containabout {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    
+    @media only screen and (max-width: 345px) {
+        .top-nav-bar-headings>p {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .busy-life-video>video {
+            justify-content: center;
+            margin-left: 20vw;
+        }
     }
