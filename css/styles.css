@@ -43,6 +43,12 @@
         font-weight: bolder;
     }
     
+    .list>button:hover {
+        font-weight: 900;
+        transform: scale(1.05);
+        background-color: rgb(196, 194, 194);
+    }
+    
     .top-nav-bar-headings>img {
         margin-right: 3vw;
         align-items: center;
@@ -636,11 +642,19 @@
         .top-nav-bar-headings>p {
             display: none;
         }
+        .list>img {
+            height: 8vh;
+            width: 18vw;
+        }
     }
     
     @media only screen and (max-width: 600px) {
         .busy-life-video>video {
             justify-content: center;
             margin-left: 20vw;
+        }
+        .list>img {
+            height: 8vh;
+            width: 18vw;
         }
     }
