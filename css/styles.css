@@ -36,11 +36,12 @@
     
     .list>img {
         height: 12vh;
-        width: 12vw;
+        width: 10vw;
     }
     
     .list>button {
         font-weight: bolder;
+        text-align: center;
     }
     
     .list>button:hover {
