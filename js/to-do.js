@@ -3,6 +3,11 @@ var toggleshortcuts_counter1 = 0
 todaybadgecounter = 0
 var text = ""
 
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+})
+
 function toggleclick() {
     if (toggleshortcuts_counter)
         document.getElementById("toggleshortcuts").style.display = "none";

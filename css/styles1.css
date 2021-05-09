@@ -39,6 +39,7 @@ li:hover {
 .leftsidebar {
     height: 100vh;
     /* width: 16vw; */
+    max-width: 18vw;
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: column;
@@ -270,6 +271,11 @@ li:hover {
     cursor: pointer;
 }
 
+.leftbox1right {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .leftbox1right>h5 {
     position: relative;
     top: -6vh;
@@ -286,7 +292,7 @@ li:hover {
     position: relative;
     top: -7vh;
     margin-left: 5vw;
-    margin-top: -10px;
+    /* margin-top: -10px; */
     font-weight: 600;
 }
 
@@ -295,8 +301,8 @@ li:hover {
     font-weight: 800;
     font-size: 15px;
     cursor: pointer;
-    position: relative;
-    right: 70px;
+    /* position: relative;
+    right: 0px; */
 }
 
 .create-a-task {
@@ -306,7 +312,7 @@ li:hover {
     top: -4vh;
     /* margin-top: 15px; */
     border-radius: 50px;
-    margin-left: 3vw;
+    margin-left: 1vw;
     font-size: 40pxpx;
     padding-right: 4vw;
     padding-left: 3vw;
