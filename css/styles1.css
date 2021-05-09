@@ -11,6 +11,7 @@ li {
     font-style: italic;
     font-size: medium;
     font-family: cursive;
+    color: #0080ff;
 }
 
 li:hover {
@@ -123,18 +124,21 @@ li:hover {
     /* flex-direction: row; */
     /* justify-content: space-between; */
     /* flex-wrap: wrap; */
-    box-shadow: 2px 4px 38px grey;
+    box-shadow: 2px 4px 38px rgb(223, 222, 222);
+    color: #0080ff;
 }
 
 .inputtext {
-    border-radius: 50px;
+    border-radius: 20px;
     width: 100%;
     margin-left: 1vw;
     margin-right: 1vw;
     outline: none;
-    border: 2px solid grey;
+    border: 2px solid rgb(223, 223, 223);
     margin-bottom: 5px;
     margin-top: 5px;
+    color: #0080ff;
+    font-family: cursive;
 }
 
 .inputtextbutton {
@@ -144,16 +148,24 @@ li:hover {
     margin-bottom: 2px;
 }
 
+::placeholder {
+    color: #16e234;
+    ;
+}
+
 .inputtextbutton:hover {
     transform: scale(1.05);
 }
 
 .inputtext:focus {
-    border: 1px solid #0080ff;
+    /* border: 1px solid #0080ff; */
+    border: 2px solid #16e234;
+    color: #0080ff;
 }
 
 .inputtext:hover {
-    border: 2px solid #0080ff;
+    /* border: 2px solid #0080ff; */
+    border: 2px solid #16e234;
 }
 
 .box1 {

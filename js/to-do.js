@@ -36,13 +36,17 @@ function addtolist() {
         if (element == " ")
             counter++;
     }
-    if (counter != text.length)
-        document.getElementById("today").innerHTML = s + "<li>" + text + "</li>"
-    else
+    if (counter == text.length)
         createtask();
-    document.getElementById("inputtext").value = "";
-    todaybadgecounter++
-    document.getElementById("todaybadgecounter").innerHTML = todaybadgecounter
+    else
+
+    {
+        document.getElementById("today").innerHTML = s + "<li>" + text + "</li>"
+        document.getElementById("inputtext").value = "";
+        todaybadgecounter++
+        document.getElementById("todaybadgecounter").innerHTML = todaybadgecounter
+        document.getElementById("todaybadgecounters").innerHTML = todaybadgecounter
+    }
 }
 
 function createtask() {
