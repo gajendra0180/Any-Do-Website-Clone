@@ -3,6 +3,20 @@ body {
     background-size: cover;
 }
 
+li {
+    list-style: none;
+    margin-left: 1vw;
+    padding: 4px;
+    font-weight: normal;
+    font-style: italic;
+    font-size: medium;
+    font-family: cursive;
+}
+
+li:hover {
+    font-weight: 600;
+}
+
 .alert {
     text-align: center;
     color: white;
@@ -143,7 +157,7 @@ body {
 
 .box1 {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     height: 61vh;
     width: 25vw;
@@ -163,7 +177,12 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.box1days>div>ul:hover {
+
+/* .box1days>div>ul:hover {
+    color: #0080ff;
+} */
+
+.box1dayss>ul>h5:hover {
     color: #0080ff;
 }
 

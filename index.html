@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="/js/to-do.js"></script>
+    <script src="/js/mousetrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -118,12 +119,12 @@
 
                 <div class="box1 ">
 
-                    <div class="box1days ">
+                    <div class="box1days">
                         <div class="box1dayss">
-                            <ul>
+                            <ul id="today">
                                 <h5>Today</h5>
                             </ul>
-                            <span class="badge badge-secondary">0</span>
+                            <span class="badge badge-secondary" id="todaybadgecounter">0</span>
                         </div>
                         <div class="box1dayss">
                             <ul>
@@ -134,22 +135,20 @@
                         <div class="box1dayss">
                             <ul>
                                 <h5>Upcoming</h5>
-
                             </ul>
                             <span class="badge badge-secondary">0</span>
                         </div>
                         <div class="box1dayss">
                             <ul>
                                 <h5>Someday</h5>
-
                             </ul>
                             <span class="badge badge-secondary">0</span>
                         </div>
                     </div>
 
                     <div class="inputbox">
-                        <input type="text" class="inputtext" placehoder="Click to quickly add a task" id="inputtext">
-                        <button type="button" class="btn btn-primary inputtextbutton">&nbsp;Add&nbsp;</button>
+                        <input type="text" class="inputtext mousetrap" placehoder="Click to quickly add a task" id="inputtext">
+                        <button type="button" onclick="addtolist()" class="btn btn-primary inputtextbutton">&nbsp;Add&nbsp;</button>
                     </div>
 
                 </div>
