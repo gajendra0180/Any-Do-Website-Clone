@@ -25,7 +25,14 @@ function addtolist() {
     console.log(document.getElementById("today").innerHTML)
     var s = document.getElementById("today").innerHTML
     console.log(text)
-    document.getElementById("today").innerHTML = s + "<li>" + text + "</li>"
+    let counter = 0;
+    for (let i = 0; i < text.length; i++) {
+        const element = text[i];
+        if (element == " ")
+            counter++;
+    }
+    if (counter != text.length)
+        document.getElementById("today").innerHTML = s + "<li>" + text + "</li>"
     document.getElementById("inputtext").value = "";
     todaybadgecounter++
     document.getElementById("todaybadgecounter").innerHTML = todaybadgecounter
