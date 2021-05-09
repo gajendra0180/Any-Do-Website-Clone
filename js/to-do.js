@@ -33,7 +33,13 @@ function addtolist() {
     }
     if (counter != text.length)
         document.getElementById("today").innerHTML = s + "<li>" + text + "</li>"
+    else
+        createtask();
     document.getElementById("inputtext").value = "";
     todaybadgecounter++
     document.getElementById("todaybadgecounter").innerHTML = todaybadgecounter
+}
+
+function createtask() {
+    document.getElementById("inputtext").focus();
 }
