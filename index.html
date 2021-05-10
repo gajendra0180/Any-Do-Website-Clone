@@ -61,11 +61,11 @@
                     </div>
                     <div class="secondlistitem ">
                         <h6>Next 7 Days</h6>
-                        <span class="badge badge-secondary">0</span>
+                        <span class="badge badge-secondary" id="next7daysbadgecounters">0</span>
                     </div>
                     <div class="thirdlistitem ">
                         <h6>All Tasks</h6>
-                        <span class="badge badge-secondary">0</span>
+                        <span class="badge badge-secondary" id="alltasksbadgecounters">0</span>
                     </div>
                 </div>
             </div>
@@ -128,27 +128,27 @@
                     <div class="box1days">
                         <div class="box1dayss">
                             <ul id="today">
-                                <h5>Today</h5>
+                                <h5 onclick="daytoadd_today()">Today</h5>
                             </ul>
                             <span class="badge badge-secondary" id="todaybadgecounter">0</span>
                         </div>
                         <div class="box1dayss">
-                            <ul>
-                                <h5>Tomorrow</h5>
+                            <ul id="Tomorrow">
+                                <h5 onclick="daytoadd_tomorrow()">Tomorrow</h5>
                             </ul>
-                            <span class="badge badge-secondary">0</span>
+                            <span class="badge badge-secondary" id="Tomorrowbadgecounter">0</span>
                         </div>
                         <div class="box1dayss">
-                            <ul>
-                                <h5>Upcoming</h5>
+                            <ul id="upcoming">
+                                <h5 onclick="daytoadd_upcoming()">Upcoming</h5>
                             </ul>
-                            <span class="badge badge-secondary">0</span>
+                            <span class="badge badge-secondary" id="upcomingbadgecounter">0</span>
                         </div>
                         <div class="box1dayss">
-                            <ul>
-                                <h5>Someday</h5>
+                            <ul id="Someday">
+                                <h5 onclick="daytoadd_someday()">Someday</h5>
                             </ul>
-                            <span class="badge badge-secondary">0</span>
+                            <span class="badge badge-secondary" id="Somedaybadgecounter">0</span>
                         </div>
                     </div>
 
