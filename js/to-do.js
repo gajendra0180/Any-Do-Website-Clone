@@ -31,40 +31,52 @@ function daytoadd_today() {
     else
         document.getElementById("today").style.display = "block";
     daytoadd = 0
-    document.getElementById("today").style.color = "red";
-    document.getElementById("Tomorrow").style.color = " black";
-    document.getElementById("upcoming").style.color = " black";
-    document.getElementById("Someday").style.color = " black";
+    document.getElementById("Todayday").style.color = "red";
+    document.getElementById("Tomorrowday").style.color = " black";
+    document.getElementById("upcomingday").style.color = " black";
+    document.getElementById("Somedayday").style.color = " black";
 }
 
 function daytoadd_tomorrow() {
     toggletomorrow = !toggletomorrow
+    if (toggletomorrow)
+        document.getElementById("Tomorrow").style.display = "none";
+    else
+        document.getElementById("Tomorrow").style.display = "block";
     daytoadd = 1
-    document.getElementById("Tomorrow").style.color = " red";
-    document.getElementById("today").style.color = " black";
-    document.getElementById("upcoming").style.color = " black";
-    document.getElementById("Someday").style.color = " black";
+    document.getElementById("Tomorrowday").style.color = " red";
+    document.getElementById("Todayday").style.color = " black";
+    document.getElementById("upcomingday").style.color = " black";
+    document.getElementById("Somedayday").style.color = " black";
 
 
 }
 
 function daytoadd_upcoming() {
     toggleupcoming = !toggleupcoming
+    if (toggleupcoming)
+        document.getElementById("upcoming").style.display = "none";
+    else
+        document.getElementById("upcoming").style.display = "block";
     daytoadd = 2
-    document.getElementById("upcoming").style.color = " red";
-    document.getElementById("today").style.color = " black";
-    document.getElementById("Tomorrow").style.color = " black";
-    document.getElementById("Someday").style.color = " black";
+    document.getElementById("upcomingday").style.color = " red";
+    document.getElementById("Todayday").style.color = " black";
+    document.getElementById("Tomorrowday").style.color = " black";
+    document.getElementById("Somedayday").style.color = " black";
 
 }
 
 function daytoadd_someday() {
     togglesomeday = !togglesomeday
+    if (togglesomeday)
+        document.getElementById("Someday").style.display = "none";
+    else
+        document.getElementById("Someday").style.display = "block";
     daytoadd = 3
-    document.getElementById("Someday").style.color = " red";
-    document.getElementById("today").style.color = " black";
-    document.getElementById("Tomorrow").style.color = " black";
-    document.getElementById("upcoming").style.color = " black";
+    document.getElementById("Somedayday").style.color = " red";
+    document.getElementById("Todayday").style.color = " black";
+    document.getElementById("Tomorrowday").style.color = " black";
+    document.getElementById("upcomingday").style.color = " black";
 
 }
 
@@ -106,16 +118,16 @@ function addtolist() {
     }
 }
 
-var toggletoday = 0,
-    toggletomorrow = 0,
-    toggleupcoming = 0,
-    togglesomeday = 0;
+var toggletoday = 1,
+    toggletomorrow = 1,
+    toggleupcoming = 1,
+    togglesomeday = 1;
 
 // function toggleclickdaytoday() {
 //     if (toggleshortcuts_counter1)
 //         document.getElementById("toggleshortcuts1").style.display = "none";
 //     else
-//         document.getElementById("toggleshortcuts1").style.display = "block";
+//         document.getElementById("toggleshortcuts1").style.display = "block"; 
 //     toggleshortcuts_counter1 = !toggleshortcuts_counter1;
 // }
 

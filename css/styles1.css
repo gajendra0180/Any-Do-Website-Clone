@@ -5,7 +5,7 @@ body {
 
 li {
     list-style: none;
-    margin-left: 1vw;
+    /* margin-left: 1vw; */
     padding: 4px;
     font-weight: normal;
     font-style: italic;
@@ -183,26 +183,34 @@ li:hover {
     opacity: .9;
 }
 
-.box1days>div>ul {
-    margin-left: -10px;
+.box1daystoday>h5 {
+    margin-left: 20px;
     margin-top: 2vh;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     font-weight: 700;
     color: rgb(0, 0, 0);
 }
 
-.box1days>div>ul:hover {
-    color: #0080ff;
-}
 
-.box1dayss>ul>h5:hover {
+/* .box1days>div>h5:hover {
+    color: #0080ff;
+} */
+
+.box1daystoday>h5:hover {
     color: red;
 }
 
 .box1dayss {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+box1daystoday {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
 }
