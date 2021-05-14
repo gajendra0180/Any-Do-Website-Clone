@@ -140,7 +140,6 @@ function deletetaskk(tasknumber, daytodelete) {
     }, 0);
     setTimeout(function() {
         document.getElementById("deletetask" + tasknumber).style.opacity = "0.9";
-        document.getElementById("deletetask1").style.position = "relative";
         document.getElementById("deletetask1").style.left = "70px";
     }, 200);
     setTimeout(function() {
