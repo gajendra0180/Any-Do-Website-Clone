@@ -104,7 +104,11 @@ function addtolist() {
 
         if (freeuserlimit != 10) {
             freeuserlimit++;
-            document.getElementById(obj[daytoadd]).innerHTML = s + "<li id=deletetask" + deletetask + " onclick=deletetaskk" + "(" + deletetask + "," + daytoadd + ")" + ">" + text + '<img src="/images/delete.svg" alt="">' + "</li>";
+            // document.getElementById(obj[daytoadd]).innerHTML = s + "<li id=deletetask" + deletetask + " onclick=deletetaskk" + "(" + deletetask + "," + daytoadd + ")" + ">" + text + '<img src="/images/delete.svg" alt="">' + '<img src="/images/check.png" alt="">' + "</li>";
+            document.getElementById(obj[daytoadd]).innerHTML = s + "<li id=deletetask" + deletetask + ">" + text +
+                "<img onclick=deletetaskk(" + deletetask + "," + daytoadd + ')' + " " + "src='/images/delete.svg'>" +
+                "<img onclick=donetask(" + deletetask + "," + daytoadd + ')' + " " + "src='/images/check.png'>" + "</li>";
+
             deletetask++;
             document.getElementById("inputtext").value = "";
             todaybadgecounter++
@@ -164,6 +168,41 @@ function deletetaskk(tasknumber, daytodelete) {
 
 
 //task deleted till here
+
+//task done here
+
+function donetask(tasknumber, daytodelete) {
+    document.getElementById("deletetask" + tasknumber).style.transition = "1s";
+    document.getElementById("deletetask" + tasknumber).style.position = "relative";
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.9";
+        document.getElementById("deletetask" + tasknumber).style.left = "0px";
+    }, 0);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.8";
+        document.getElementById("deletetask" + tasknumber).style.left = "30px";
+    }, 100);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.7";
+        document.getElementById("deletetask1").style.left = "70px";
+    }, 200);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.6";
+        document.getElementById("deletetask" + tasknumber).style.left = "150px";
+    }, 400);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.5";
+        document.getElementById("deletetask" + tasknumber).style.left = "200px";
+    }, 600);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.4";
+        document.getElementById("deletetask" + tasknumber).style.left = "250px";
+    }, 800);
+    setTimeout(function() { document.getElementById("deletetask" + tasknumber).innerHTML = ""; }, 1000);
+    deletetasks(daytodelete);
+}
+
+//task done till here
 
 var toggletoday = 1,
     toggletomorrow = 1,
