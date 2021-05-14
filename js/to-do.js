@@ -106,7 +106,7 @@ function addtolist() {
     else
 
     {
-        document.getElementById(obj[daytoadd]).innerHTML = s + "<li>" + text + "</li>"
+        document.getElementById(obj[daytoadd]).innerHTML = s + "<li>" + text + '<img src="/images/delete.svg" alt="">' + "</li> ";
         document.getElementById("inputtext").value = "";
         todaybadgecounter++
         document.getElementById(badge[daytoadd]).innerHTML = ++badgecounter[daytoadd]
