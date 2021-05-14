@@ -133,17 +133,21 @@ function deletetasks(deleteday) {
 
 function deletetaskk(tasknumber, daytodelete) {
     document.getElementById("deletetask" + tasknumber).style.transition = "1s";
+    document.getElementById("deletetask" + tasknumber).style.position = "relative";
     setTimeout(function() {
         document.getElementById("deletetask" + tasknumber).style.opacity = "0.9";
-        document.getElementById("deletetask" + tasknumber).style.position = "relative";
         document.getElementById("deletetask" + tasknumber).style.left = "0px";
     }, 0);
     setTimeout(function() {
-        document.getElementById("deletetask" + tasknumber).style.opacity = "0.9";
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.8";
+        document.getElementById("deletetask" + tasknumber).style.left = "30px";
+    }, 100);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.7";
         document.getElementById("deletetask1").style.left = "70px";
     }, 200);
     setTimeout(function() {
-        document.getElementById("deletetask" + tasknumber).style.opacity = "0.7";
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.6";
         document.getElementById("deletetask" + tasknumber).style.left = "150px";
     }, 400);
     setTimeout(function() {
