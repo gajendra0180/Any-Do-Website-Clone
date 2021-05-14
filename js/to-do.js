@@ -1,7 +1,7 @@
 var toggleshortcuts_counter = 0
 var toggleshortcuts_counter1 = 0
 var text = ""
-
+var freeuserlimit = 0
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
@@ -98,25 +98,105 @@ function addtolist() {
     let counter = 0;
     for (let i = 0; i < text.length; i++) {
         const element = text[i];
-        if (element == " ")
+        if (element == " ") //check if only spaces are there in input
             counter++;
     }
     if (counter == text.length)
         createtask();
-    else
+    else {
 
-    {
-        document.getElementById(obj[daytoadd]).innerHTML = s + "<li>" + text + '<img src="/images/delete.svg" alt="">' + "</li> ";
-        document.getElementById("inputtext").value = "";
-        todaybadgecounter++
-        document.getElementById(badge[daytoadd]).innerHTML = ++badgecounter[daytoadd]
-        document.getElementById("todaybadgecounters").innerHTML = badgecounter[0]
-        document.getElementById("next7daysbadgecounters").innerHTML = badgecounter[0] + badgecounter[1] + badgecounter[2]
-        document.getElementById("alltasksbadgecounters").innerHTML = badgecounter[0] + badgecounter[1] + badgecounter[2] + badgecounter[3]
-
+        if (freeuserlimit != 10) {
+            freeuserlimit++;
+            document.getElementById(obj[daytoadd]).innerHTML = s + "<li id=deletetask" + deletetask + " onclick=deletetask" + deletetask + "()" + ">" + text + '<img src="/images/delete.svg" alt="">' + "</li>";
+            deletetask++;
+            document.getElementById("inputtext").value = "";
+            todaybadgecounter++
+            document.getElementById(badge[daytoadd]).innerHTML = ++badgecounter[daytoadd]
+            document.getElementById("todaybadgecounters").innerHTML = badgecounter[0]
+            document.getElementById("next7daysbadgecounters").innerHTML = badgecounter[0] + badgecounter[1] + badgecounter[2]
+            document.getElementById("alltasksbadgecounters").innerHTML = badgecounter[0] + badgecounter[1] + badgecounter[2] + badgecounter[3]
+        } else {
+            alert("Sorry You Have Exceede the free limit");
+        }
 
     }
 }
+
+//They are for task deleted
+var deletetask = 1;
+
+function deletetask() {
+    todaybadgecounter--;
+    document.getElementById(badge[daytoadd]).innerHTML = --badgecounter[daytoadd]
+    document.getElementById("todaybadgecounters").innerHTML = badgecounter[0]
+    document.getElementById("next7daysbadgecounters").innerHTML = badgecounter[0] + badgecounter[1] + badgecounter[2]
+    document.getElementById("alltasksbadgecounters").innerHTML = badgecounter[0] + badgecounter[1] + badgecounter[2] + badgecounter[3]
+}
+
+function deletetask1() {
+    console.log("Reached");
+    document.getElementById("deletetask1").innerHTML = "";
+    deletetask();
+}
+
+function deletetask2() {
+    console.log("Reached");
+    document.getElementById("deletetask2").innerHTML = "";
+    deletetask();
+
+}
+
+function deletetask3() {
+    console.log("Reached");
+    document.getElementById("deletetask3").innerHTML = "";
+    deletetask();
+
+}
+
+function deletetask4() {
+    console.log("Reached");
+    document.getElementById("deletetask4").innerHTML = "";
+    deletetask();
+
+}
+
+function deletetask5() {
+    console.log("Reached");
+    document.getElementById("deletetask5").innerHTML = "";
+    deletetask();
+}
+
+function deletetask6() {
+    console.log("Reached");
+    document.getElementById("deletetask6").innerHTML = "";
+    deletetask();
+}
+
+function deletetask7() {
+    console.log("Reached");
+    document.getElementById("deletetask7").innerHTML = "";
+    deletetask();
+}
+
+function deletetask8() {
+    console.log("Reached");
+    document.getElementById("deletetask8").innerHTML = "";
+    deletetask();
+}
+
+function deletetask9() {
+    console.log("Reached");
+    document.getElementById("deletetask9").innerHTML = "";
+    deletetask();
+}
+
+function deletetask10() {
+    console.log("Reached");
+    document.getElementById("deletetask10").innerHTML = "";
+    deletetask();
+}
+
+//task deleted till here
 
 var toggletoday = 1,
     toggletomorrow = 1,
