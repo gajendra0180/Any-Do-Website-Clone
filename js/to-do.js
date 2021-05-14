@@ -91,10 +91,7 @@ var badgecounter = { 0: todaybadgecounter, 1: Tomorrowbadgecounter, 2: upcomingb
 
 function addtolist() {
     text = document.getElementById("inputtext").value;
-    // console.log(document.getElementById("today").innerHTML)
     var s = document.getElementById(obj[daytoadd]).innerHTML
-    console.log(s);
-    console.log(text)
     let counter = 0;
     for (let i = 0; i < text.length; i++) {
         const element = text[i];
@@ -107,7 +104,7 @@ function addtolist() {
 
         if (freeuserlimit != 10) {
             freeuserlimit++;
-            document.getElementById(obj[daytoadd]).innerHTML = s + "<li id=deletetask" + deletetask + " onclick=deletetask" + deletetask + "()" + ">" + text + '<img src="/images/delete.svg" alt="">' + "</li>";
+            document.getElementById(obj[daytoadd]).innerHTML = s + "<li id=deletetask" + deletetask + " onclick=deletetaskk" + "(" + deletetask + "," + daytoadd + ")" + ">" + text + '<img src="/images/delete.svg" alt="">' + "</li>";
             deletetask++;
             document.getElementById("inputtext").value = "";
             todaybadgecounter++
@@ -125,76 +122,43 @@ function addtolist() {
 //They are for task deleted
 var deletetask = 1;
 
-function deletetask() {
-    todaybadgecounter--;
-    document.getElementById(badge[daytoadd]).innerHTML = --badgecounter[daytoadd]
+function deletetasks(deleteday) {
+    // todaybadgecounter--;
+    console.log(deleteday)
+    document.getElementById(badge[deleteday]).innerHTML = --badgecounter[deleteday]
     document.getElementById("todaybadgecounters").innerHTML = badgecounter[0]
     document.getElementById("next7daysbadgecounters").innerHTML = badgecounter[0] + badgecounter[1] + badgecounter[2]
     document.getElementById("alltasksbadgecounters").innerHTML = badgecounter[0] + badgecounter[1] + badgecounter[2] + badgecounter[3]
 }
 
-function deletetask1() {
-    console.log("Reached");
-    document.getElementById("deletetask1").innerHTML = "";
-    deletetask();
+function deletetaskk(tasknumber, daytodelete) {
+    document.getElementById("deletetask" + tasknumber).style.transition = "1s";
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.9";
+        document.getElementById("deletetask" + tasknumber).style.position = "relative";
+        document.getElementById("deletetask" + tasknumber).style.left = "0px";
+    }, 0);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.9";
+        document.getElementById("deletetask1").style.position = "relative";
+        document.getElementById("deletetask1").style.left = "70px";
+    }, 200);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.7";
+        document.getElementById("deletetask" + tasknumber).style.left = "150px";
+    }, 400);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.5";
+        document.getElementById("deletetask" + tasknumber).style.left = "200px";
+    }, 600);
+    setTimeout(function() {
+        document.getElementById("deletetask" + tasknumber).style.opacity = "0.4";
+        document.getElementById("deletetask" + tasknumber).style.left = "250px";
+    }, 800);
+    setTimeout(function() { document.getElementById("deletetask" + tasknumber).innerHTML = ""; }, 1000);
+    deletetasks(daytodelete);
 }
 
-function deletetask2() {
-    console.log("Reached");
-    document.getElementById("deletetask2").innerHTML = "";
-    deletetask();
-
-}
-
-function deletetask3() {
-    console.log("Reached");
-    document.getElementById("deletetask3").innerHTML = "";
-    deletetask();
-
-}
-
-function deletetask4() {
-    console.log("Reached");
-    document.getElementById("deletetask4").innerHTML = "";
-    deletetask();
-
-}
-
-function deletetask5() {
-    console.log("Reached");
-    document.getElementById("deletetask5").innerHTML = "";
-    deletetask();
-}
-
-function deletetask6() {
-    console.log("Reached");
-    document.getElementById("deletetask6").innerHTML = "";
-    deletetask();
-}
-
-function deletetask7() {
-    console.log("Reached");
-    document.getElementById("deletetask7").innerHTML = "";
-    deletetask();
-}
-
-function deletetask8() {
-    console.log("Reached");
-    document.getElementById("deletetask8").innerHTML = "";
-    deletetask();
-}
-
-function deletetask9() {
-    console.log("Reached");
-    document.getElementById("deletetask9").innerHTML = "";
-    deletetask();
-}
-
-function deletetask10() {
-    console.log("Reached");
-    document.getElementById("deletetask10").innerHTML = "";
-    deletetask();
-}
 
 //task deleted till here
 
