@@ -20,13 +20,17 @@ li>img {
     margin-left: 3vw;
 }
 
+
+/* 
 li>img:hover {
     transform: scale(1.1);
-}
+} */
 
+
+/* 
 li:hover {
     font-weight: 600;
-}
+} */
 
 .alert {
     text-align: center;
@@ -185,7 +189,7 @@ li:hover {
     /* flex-wrap: wrap; */
     flex-direction: column;
     /* height: 61vh; */
-    width: 25vw;
+    width: auto;
     justify-content: space-between;
     margin-right: 2vw;
     background-color: whitesmoke;

@@ -180,7 +180,7 @@ function donetask(tasknumber, daytodelete) {
     }, 0);
     setTimeout(function() {
         document.getElementById("deletetask" + tasknumber).style.opacity = "0.8";
-        document.getElementById("deletetask" + tasknumber).style.left = "30px";
+        document.getElementById("deletetask" + tasknumber).style.left = "-30px";
     }, 100);
     setTimeout(function() {
         document.getElementById("deletetask" + tasknumber).style.opacity = "0.7";
@@ -188,15 +188,15 @@ function donetask(tasknumber, daytodelete) {
     }, 200);
     setTimeout(function() {
         document.getElementById("deletetask" + tasknumber).style.opacity = "0.6";
-        document.getElementById("deletetask" + tasknumber).style.left = "150px";
+        document.getElementById("deletetask" + tasknumber).style.left = "-150px";
     }, 400);
     setTimeout(function() {
         document.getElementById("deletetask" + tasknumber).style.opacity = "0.5";
-        document.getElementById("deletetask" + tasknumber).style.left = "200px";
+        document.getElementById("deletetask" + tasknumber).style.left = "-200px";
     }, 600);
     setTimeout(function() {
         document.getElementById("deletetask" + tasknumber).style.opacity = "0.4";
-        document.getElementById("deletetask" + tasknumber).style.left = "250px";
+        document.getElementById("deletetask" + tasknumber).style.left = "-250px";
     }, 800);
     setTimeout(function() { document.getElementById("deletetask" + tasknumber).innerHTML = ""; }, 1000);
     deletetasks(daytodelete);
