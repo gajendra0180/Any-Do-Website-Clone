@@ -223,7 +223,7 @@ li:hover {
     flex-wrap: wrap;
 }
 
-box1daystoday {
+.box1daystoday {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -555,5 +555,34 @@ box1daystoday {
     }
     .button2 {
         left: -60px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .inputbox {
+        flex-direction: column;
+    }
+    .inputtext {
+        width: 95%;
+        margin-left: 2vw;
+        margin-top: -15px;
+        /* padding-top: 2%; */
+    }
+    .inputtextbutton {
+        margin-left: 3vw;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 338px) {
+    .box2>button {
+        font-size: 11px;
+    }
+    .rightcontainerfirstutton>button {
+        margin-top: -8vh;
+        font-size: 17px;
+    }
+    .button2 {
+        left: -50px;
     }
 }
