@@ -1,6 +1,7 @@
 body {
     background-image: url("/images/app-side-container-background.webp");
     background-size: cover;
+    height: 100vh;
 }
 
 li {
@@ -105,7 +106,7 @@ li:hover {
 }
 
 .rightcontainerfirstutton {
-    margin-top: -16vh;
+    margin-top: -15vh;
     margin-bottom: 30px;
     max-width: 70%;
     /* margin-left: 5.4vw; */
@@ -231,7 +232,8 @@ box1daystoday {
 
 .box1dayss>span {
     margin-right: 10px;
-    margin-top: 8px;
+    /* margin-top: 8px; */
+    margin-top: 2.5vh;
     height: 1.5rem;
     border-radius: 50px;
     padding-top: 5px;
@@ -246,7 +248,8 @@ box1daystoday {
     flex-direction: column;
     height: auto;
     min-height: 61vh;
-    width: 25vw;
+    width: 28vw;
+    /* width: auto; */
     background-color: white;
     border-radius: 15px;
     background-image: url("/images/calendar-login-450.ff1598d7.jpg");
@@ -451,4 +454,106 @@ box1daystoday {
 .sixthlistitem:hover {
     cursor: pointer;
     background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 1200px) {
+    .button1 {
+        display: none;
+    }
+    .rightcontainerfirstutton {
+        margin-top: -10vh;
+    }
+    .create-a-task {
+        padding-right: 2vw;
+        padding-left: 1vw;
+        margin-top: 2vh;
+    }
+    .leftbox1right>h5 {
+        top: -2vh;
+        margin-left: 2vw;
+    }
+    .leftbox1right>span {
+        display: none;
+    }
+    .upgrade {
+        display: none;
+    }
+    .box2 {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rightcontainerfirstutton {
+        max-width: 100vw;
+    }
+    .button2 {
+        display: none;
+    }
+    .box1 {
+        margin-left: -6vw;
+    }
+    .box2 {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 954px) {
+    .leftsidebar {
+        display: none;
+    }
+    .box1 {
+        margin-left: 3vw;
+        width: 42vw;
+    }
+    .box2 {
+        width: 40vw;
+    }
+    .rightcontainerfirstutton {
+        margin-top: 0vh;
+    }
+}
+
+@media only screen and (max-width: 748px) {
+    .rightcontainerfirstutton {
+        margin-right: 10px;
+    }
+    .box1 {
+        width: 85vw;
+        min-height: 80vh;
+        margin-bottom: 10vh;
+        padding-bottom: 4vh;
+        position: relative;
+        left: -15px;
+    }
+    .box1daystoday>h5 {
+        margin-top: 7vh;
+    }
+    .box1dayss>span {
+        margin-top: 7vh;
+    }
+    .box2 {
+        width: 85vw;
+        min-height: 90vh;
+        margin-bottom: 10vh;
+        padding-bottom: 2vh;
+        position: relative;
+        left: -15px;
+    }
+    .button2 {
+        display: block;
+        position: relative;
+        left: -90px;
+        margin-top: 10px;
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hideit {
+        display: none;
+    }
+    .button2 {
+        left: -60px;
+    }
 }
