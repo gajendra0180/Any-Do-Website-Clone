@@ -1,21 +1,16 @@
 h1,
-h2,
-h3 {
+h2 {
     font-weight: 200;
     margin: 0.4em 0;
 }
 
-h1,
-h3 {
+h1 {
     font-size: 3.5em;
 }
 
-h2,
-h3 {
+h2 {
     color: #888;
     font-size: 2em;
-    text-decoration: underline;
-    letter-spacing: 2px;
 }
 
 .page-header {

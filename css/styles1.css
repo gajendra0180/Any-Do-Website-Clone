@@ -14,7 +14,15 @@ li {
     font-family: cursive;
     color: #0080ff;
 }
-
+.connectwith{
+    text-decoration: none;
+    color: white;
+}
+.connectwith:hover{
+    text-decoration: none;
+    color: white;
+    opacity: .8;
+}
 li>img {
     cursor: pointer;
     height: 4vh;

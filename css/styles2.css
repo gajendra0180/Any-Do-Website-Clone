@@ -44,7 +44,7 @@
     background-color: rgb(196, 194, 194);
 }
 
-.top-nav-bar-headings>img {
+.top-nav-bar-headings>a>img {
     margin-right: 3vw;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,10 @@
     outline: none;
     transition: .5s;
 }
-
+.btn-dark>a{
+text-decoration: none;
+color: white;
+}
 .top-nav-bar-button:hover {
     background-color: #0083ff;
     outline: none;
